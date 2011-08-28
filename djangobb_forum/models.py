@@ -48,8 +48,8 @@ try:
 except ImportError:
     pass
 
-path = os.path.join(settings.MEDIA_ROOT, 'forum', 'themes')
-THEME_CHOICES = [(theme, theme) for theme in os.listdir(path) 
+path = os.path.join(settings.STATIC_ROOT, 'forum', 'themes')
+THEME_CHOICES = [(theme, theme) for theme in os.listdir(path)
                  if os.path.isdir(os.path.join(path, theme))]
 
 class Category(models.Model):
